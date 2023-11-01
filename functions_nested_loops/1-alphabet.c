@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* main - entry point
-* Description: Validate last digit
-* n: the number to be checked
-* Return: Always 0 (Succes)
+* print_alphabet - print alphabet lower case
 */
 
 void print_alphabet(void)
@@ -18,6 +15,4 @@ void print_alphabet(void)
 		n++;
 	}
 	putchar('\n');
-
-	return;
 }
