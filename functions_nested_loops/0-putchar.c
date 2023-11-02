@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <unistd.h>
+#include "main.h"
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
@@ -19,6 +21,6 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-}
+
 return (0);
 }
