@@ -29,7 +29,7 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			if (nproduct <= 9)
+			if (nproduct <= 9 && column != 9)
 			{
 				_putchar(' ');
 			}
