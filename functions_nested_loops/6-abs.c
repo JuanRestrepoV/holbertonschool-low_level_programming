@@ -2,7 +2,7 @@
 #include "main.h"
 /**
 * _abs - compute absolute value
-*@int: integer to be compute
+*@n: integer to be computed
 *
 * Description: Computes absolut value of a number
 * Return: 0 if succes
