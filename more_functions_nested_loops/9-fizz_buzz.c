@@ -3,6 +3,7 @@
 * main - print 0 to 100
 *
 * Description: print fizz or buzz for multiples of 3 and 5 respectively
+* Return: 0 if succes
 */
 int main(void)
 {
@@ -35,6 +36,6 @@ int main(void)
 			printf("\n");
 		}
 	}
-	return 0;
+	return (0);
 }
 
