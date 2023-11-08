@@ -12,7 +12,7 @@ void rev_string(char *s)
 	int j;
 	int rev;
 
-	for (a = 0; s[a] != '\0'; a++);/**a es = ultima posicion de *s*/
+	for (a = 0; s[a] != '\0'; a++)/**a es = ultima posicion de *s*/
 	for (j = 0; j < a / 2; j++)/**j recorre posiciones de *s hasta mitad*/
 	{
 		rev = s[j];/**rev es = posicion de j*/
