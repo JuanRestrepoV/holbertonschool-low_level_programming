@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* print_last_digit - print last digit of a number
-*@n: number compute
+* _strlen - returns the length of a string
+*@s: variable that contains a string
 *
-* Description: Print last digit of a positive or negative number
+* Description: returns the length of a string.
 * Return: 0 if succes
 */
 int _strlen(char *s)
