@@ -17,6 +17,7 @@ void puts2(char *str)
 		conteo++;
 		if (str[conteo] == '\0')
 		{
+			_putchar(str[conteo]);
 			return;
 		}
 		conteo++;
