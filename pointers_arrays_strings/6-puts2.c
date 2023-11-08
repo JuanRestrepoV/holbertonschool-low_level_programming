@@ -15,6 +15,10 @@ void puts2(char *str)
 	{
 		_putchar (str[conteo]);
 		conteo++;
+		if (str[conteo] == '\0')
+		{
+			return;
+		}
 		conteo++;
 	}
 	_putchar ('\n');
