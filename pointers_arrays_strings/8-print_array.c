@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* puts2 - prints every other character of a string
-* @str: pointer to string
+* print_array - prints n elements of an array of integers
+* @a: pointer to string
+* @n: number of arrays of the string
 *
-* Description: prints every other character of a string.
+* Description: prints n elements of an array of integers
 */
 void print_array(int *a, int n)
 {
