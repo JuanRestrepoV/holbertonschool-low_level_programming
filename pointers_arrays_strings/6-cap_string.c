@@ -15,9 +15,10 @@ char *cap_string(char *str)
 		{
 			str[b] = str[b] - 'a' + 'A';
 		}
-		else if (str[b] == ' ' || str[b] == '\t' || str[b] == '\n' || str[b] == ',' ||
-			str[b] == ';' || str[b] == '.' || str[b] == '!' || str[b] == '?' || str[b] == '"' ||
-			str[b] == '(' || str[b] == ')' || str[b] == '{' || str[b] == '}')
+		else if (str[b] == ' ' || str[b] == '\t' || str[b] == '\n' || str[b] == ',' 
+			|| str[b] == ';' || str[b] == '.' || str[b] == '!' || str[b] == '?' ||
+			str[b] == '"' || str[b] == '(' || str[b] == ')' || str[b] == '{' 
+			|| str[b] == '}')
 		{
 			if ((str[b + 1] >= 'a' && str[b + 1] <= 'z'))
 			{
