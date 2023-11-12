@@ -12,6 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int a;
 	int b, c;
 
+	a = 0;
 	for (b = 0; s[b] != '\0'; b++)
 	{
 		for (c = 0; accept[c] != '\0'; c++)
@@ -21,7 +22,6 @@ unsigned int _strspn(char *s, char *accept)
 				a++;
 				break;
 			}
-			
 		}
 		if (accept[c] == '\0')
 		{
