@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* _strlen - returns the length of a string
-*@s: variable that contains a string
+* _strlen_recursion - returns the length of a string
+* @s: variable that contains a string
 *
 * Description: returns the length of a string.
 * Return: lenght of the string pointed by *s.
