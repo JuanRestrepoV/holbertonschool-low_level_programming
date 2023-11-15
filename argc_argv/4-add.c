@@ -10,19 +10,17 @@
 */
 int main(int argc, char *argv[])
 {
-	int a, sum = 0;
+	int a, b, sum = 0;
 
 	for (a = 1; a < argc; a++)
 	{
-		if (*argv[a] < '0' || *argv[a] > '9')
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
+			if (argv[a][b] < '0' || argv[a][b] > '9')
+			{
 			printf("error\n");
 			return (1);
-		}
-		if (*argv[a + 1] < '0' || *argv[a + 1] > '9')
-		{
-			printf("error\n");
-			return (1);
+			}
 		}
 		sum += atoi(argv[a]);
 	}
