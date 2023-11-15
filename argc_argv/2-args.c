@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
-* main - prints the number of arguments passed into it.
+* main -  prints all arguments it receives.
 * @argc: argument count
 * @argv: argument vector
 *
-* Description: prints the number of arguments passed into it.
+* Description:  prints all arguments it receives.
 * Return: 0 if succes
 */
 int main(int argc, char *argv[])
@@ -15,5 +15,5 @@ int main(int argc, char *argv[])
 	{
 		printf("%s\n", argv[a]);
 	}
-	return (1);
+	return (0);
 }
