@@ -14,7 +14,12 @@ int main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-	if ((*argv[a] < '0' || *argv[a] > '9') && (*argv[a + 1] < '0' || *argv[a + 1] > '9'))
+		if (*argv[a] < '0' || *argv[a] > '9')
+		{
+			printf("error\n");
+			return (1);
+		}
+		if (*argv[a + 1] < '0' || *argv[a + 1] > '9')
 		{
 			printf("error\n");
 			return (1);
