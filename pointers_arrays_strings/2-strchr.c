@@ -14,13 +14,9 @@ char *_strchr(char *s, char c)
 	int a;
 
 	for (a = 0; s[a] != c; a++)
-	if (s[a] == c)
-	{
-		return (&s[a]);
-	}
-	if (s[a] != c)
+	while (s[a] != c)
 	{
 		return (NULL);
 	}
-	return (NULL);
+	return (&s[a]);
 }
