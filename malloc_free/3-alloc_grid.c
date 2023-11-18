@@ -1,13 +1,29 @@
 #include <stdlib.h>
 #include <stdlib.h>
 /**
-* *str_concat - concatenates two strings.
-* @s1: pointer to string 1 for copy into concat
-* @s2: pointer to string 2 for add to concat after s1 copy
+* alloc_grid - returns a pointer to a 2 dimensional array of integers.
+* @width: width of matrix
+* @height: height of matrix
 *
-* Description: returned pointer should point to a newly allocated space
-* in memory which contains the contents of s1 followed by the
-* contents of s2, and null terminated.
-* Return: On success 1.
+* Description: returns a pointer to a 2 dimensional array of integers
+* Return: a pointer..
 */
 int **alloc_grid(int width, int height)
+{
+	int **matrix, i, j;
+
+	matrix = malloc(sizeof(int *) * height);
+	for (i = 0; i < height; i++)
+	{
+		matrix[i] = malloc(sizeof(int) * width);
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			matrix[i][j] = 0;
+		}
+		i++;
+	}
+	return (matrix);
+}
