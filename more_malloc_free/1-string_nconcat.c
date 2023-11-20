@@ -15,46 +15,44 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *string;
-	unsigned int s1_len, s2_len, i, j;
+	unsigned int s1_len, s2_len;
+	char *ccat_str;
 
-	s1_len = 0, s2_len = 0;
 	if (s1 != NULL)
 	{
-		while (s1[s1_len])
-		{
-			s1_len++;
-		}
+		s1_len = strlen(s1);
+	}
+	else
+	{
+		s1_len = 0;
 	}
 	if (s2 != NULL)
 	{
-		while (s2[s2_len])
-		{
-			s2_len++;
-		}
+		s2_len = strlen(s2);
+	}
+	else
+	{
+		s2_len = 0;
 	}
 	if (n >= s2_len)
 	{
 		n = s2_len;
 	}
-	string = malloc(sizeof(char) * (s1_len + n + 1));
+	ccat_str = malloc((s1_len + n + 1) * sizeof(char));
 
-	i = 0, j = 0;
-	if (string == NULL)
+	if (ccat_str == NULL)
 	{
 		return (NULL);
-	}	
+	}
 	if (s1 != NULL)
 	{
-		for (i = 0; i < s1_len; i++)
-		{
-			string[i] = s1[i];
-		}
+		strcpy(ccat_str, s1);
 	}
-	for (j = 0; j < n; j++)
+	else
 	{
-		string[i++] = s2[j];
+		ccat_str[0] = '\0';
 	}
-	string[i] = '\0';
-	return (string);
+	strncat(ccat_str + s1_len, s2, n);
+	ccat_str[s1_len + n] = '\0';
+	return (ccat_str);
 }
