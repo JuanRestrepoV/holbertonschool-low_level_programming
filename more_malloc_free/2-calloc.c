@@ -10,6 +10,7 @@
 * Description: The _calloc function allocates memory for
 * an array of nmemb elements of size bytes each and returns
 * a pointer to the allocated memory.
+* Return: pointer to allocated memory.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
