@@ -43,6 +43,7 @@ void print_all(const char * const format, ...)
 	if (format[j + 1])
 	{
 		printf(", ");
+	}
 		j++;
 	}
 	va_end(args);
