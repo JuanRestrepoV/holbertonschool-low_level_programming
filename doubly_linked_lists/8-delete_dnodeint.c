@@ -12,12 +12,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i;
 	dlistint_t *current;
 
-	current = *head;
-
 	if (*head == NULL)
 	{
 		return (-1);
 	}
+
+	current = *head;
 
 	if (index == 0)
 	{
@@ -41,11 +41,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 	}
 
-	current->prev->next = current->next;
 	if (current->next != NULL)
 	{
 		current->next->prev = current->prev;
 	}
+	current->prev->next = current->next;
 	free(current);
 	return (1);
 }
