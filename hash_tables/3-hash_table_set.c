@@ -62,7 +62,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
-	if (ht->array[index] == new_node)
+	if (ht->array[index] == new_node->key)
 	{
 		ht->array[index] = new_node;
 		return (1);
