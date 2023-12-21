@@ -1,5 +1,12 @@
 #include "hash_tables.h"
 /**
+* custom_key_index - Creates a new hash node with a given key-value pair.
+* @key: Pointer to a string representing the key.
+* @value: Pointer to a string representing the value associated with the key.
+*
+* This function allocates memory for a new hash node, copies the provided key
+* and value strings, and initializes the node's pointers. Returns a pointer to
+* the newly created hash_node_t structure if successful, or NULL on failure.
 */
 hash_node_t *custom_key_index(const char *key, const char *value)
 {
@@ -53,6 +60,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		ht->array[index] = new_node;
 		return (1);
+	}
+	if (ht->array[index] == new_node)
+	{
+		ht->array[index] = new_node;
 	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
