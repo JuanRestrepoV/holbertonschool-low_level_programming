@@ -65,7 +65,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	i = ht->array[index];
 	while (i != NULL)
 	{
-		if (i->key == new_node_key)
+		if (i->key == key)
 		{
 			i->value = strdup(value);
 			free(new_node->key);
