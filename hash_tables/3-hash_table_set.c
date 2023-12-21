@@ -7,6 +7,7 @@
 * This function allocates memory for a new hash node, copies the provided key
 * and value strings, and initializes the node's pointers. Returns a pointer to
 * the newly created hash_node_t structure if successful, or NULL on failure.
+* Return: hash_node_t type.
 */
 hash_node_t *custom_key_index(const char *key, const char *value)
 {
@@ -64,6 +65,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] == new_node)
 	{
 		ht->array[index] = new_node;
+		return (1);
 	}
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
