@@ -62,9 +62,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
-	if (ht->array[index]->key == new_node->key)
+	if (ht->array[index] == new_node)
 	{
-		ht->array[index] = new_node;
+		ht->array[index]->key = new_node->key;
+		ht->array[index]->value = new_node->value;
+		ht->array[index]->next = NULL;
 		return (1);
 	}
 	new_node->next = ht->array[index];
