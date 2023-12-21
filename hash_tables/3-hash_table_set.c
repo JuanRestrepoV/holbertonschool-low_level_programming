@@ -64,8 +64,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	if (ht->array[index]->key == new_node->key)
 	{
-		free(ht->array[index]);
-		ht->array[index] = new_node;
+		free(ht->array[index]->value);
+		ht->array[index]->value = new_node->value;
+		free(new_node->key);
+		free(new_node->value);
+		free(new_node);
 		return (1);
 	}
 	new_node->next = ht->array[index];
