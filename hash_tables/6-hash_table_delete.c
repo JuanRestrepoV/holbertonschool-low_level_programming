@@ -4,7 +4,7 @@
 * @ht: A pointer to the hash table to be deleted
 *
 * Description:
-*   This function frees the memory allocated for the hash table and its elements.
+*   This function frees the memory allocated for the hash table and its element
 *   If ht is NULL, the function does nothing.
 */
 void hash_table_delete(hash_table_t *ht)
@@ -27,6 +27,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(temp->value);
 			free(temp);
 		}
+		ht->array[i] = NULL;
 	}
 	free(ht->array);
 	free(ht);
